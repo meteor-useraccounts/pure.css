@@ -1,6 +1,6 @@
 Package.describe({
   summary: 'Accounts Templates styled for Pure.css.',
-  version: '1.7.0',
+  version: '1.13.0',
   name: 'useraccounts:pure.css',
   git: 'https://github.com/meteor-useraccounts/pure.css.git',
 });
@@ -16,13 +16,13 @@ Package.on_use(function(api, where) {
   api.use([
     'useraccounts:core',
   ], ['client', 'server']);
-  
+
   // Requires all routing packages loads before this asking for weak dependencies.
-  api.use('useraccounts:flow-routing@1.12.1', ['client', 'server'], {weak: true});
-  api.use('useraccounts:iron-routing@1.12.1', ['client', 'server'], {weak: true});
+  api.use('useraccounts:flow-routing@1.13.1', ['client', 'server'], {weak: true});
+  api.use('useraccounts:iron-routing@1.13.1', ['client', 'server'], {weak: true});
 
   api.imply([
-    'useraccounts:core@1.8.1',
+    'useraccounts:core@1.13.1',
   ], ['client', 'server']);
 
   api.add_files([
@@ -70,7 +70,7 @@ Package.on_use(function(api, where) {
 Package.on_test(function(api) {
   api.use([
     'useraccounts:pure.css',
-    'useraccounts:core@1.8.1',
+    'useraccounts:core@1.13.1',
   ]);
 
   api.use([
